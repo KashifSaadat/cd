@@ -1,0 +1,25 @@
+{
+    "name": "kashifsaadat/cd",
+    "description": "Directory Manager",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mike Fisher",
+            "email": "mike@mbfisher.com"
+        },
+        {
+            "name": "Kashif Saadat",
+            "email": "kashifsaadat@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "task/task": "~0.1",
+        "task/phpunit": "~0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "KashifSaadat\\DirectoryManager\\": "src/"
+        }
+    }
+}

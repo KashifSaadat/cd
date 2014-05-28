@@ -1,0 +1,19 @@
+<?php
+
+require 'vendor/autoload.php';
+
+$project = new Task\Project('DirectoryManager');
+
+$project->inject(function ($container) {
+    $container['phpunit'] = new Plugin\PHPUnitPlugin(__DIR__.'/vendor/bin/phpunit');
+});
+
+$project->addTask('test', ['phpunit', function ($phpunit) {
+    $phpunit->getCommand()
+        ->setWorkingDirectory('src')
+        ->setTimeout(120)
+        ->addCoverage('html', 'tests/reports')
+        ->pipe($this->getOutput());
+}]);
+
+return $project;
