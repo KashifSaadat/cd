@@ -1,0 +1,10 @@
+<phpunit bootstrap="vendor/autoload.php" colors="true" backupGlobals="false">
+    <testsuite name="DirectoryManagerTestSuite">
+        <directory>./tests/src</directory>
+    </testsuite>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">src</directory>
+        </whitelist>
+    </filter>
+</phpunit>

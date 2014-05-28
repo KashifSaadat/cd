@@ -19,8 +19,8 @@ class DirectoryManager
 
     public function reset()
     {
-        if ($path = $this->getPaths()->pop()) {
-            chdir($path);
+        if (!$this->getPaths()->isEmpty()) {
+            chdir($this->getPaths()->pop());
         }
     }
 
